@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>Asterisk Windmill</title>
+    <script src="//unpkg.com/jquery/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="//unpkg.com/bootstrap/dist/css/bootstrap.min.css" />
+    <script src="//unpkg.com/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="//unpkg.com/lodash/lodash.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.packed.js"></script>
+  </head>
+  <body>
+    <canvas id="canvas"></canvas>
+    <div id="panel" class="text-light">
+      <button id="play" class="btn text-light"></button>
+      <button id="spin" class="btn text-light">@</button>
+      <div>
+        <input id="shape-square" class="shape" type="radio" name="shape" value="square" checked />
+        <label for="shape-square">Square</label>
+      </div>
+      <div>
+        <input id="shape-circle" class="shape" type="radio" name="shape" value="circle" />
+        <label for="shape-circle">Circle</label>
+      </div>
+      <div>
+        N:
+        <span id="current-number" class="badge badge-dark text-light"></span>
+        <input id="number" type="range" min="3" step="1" max="128" />
+      </div>
+      <div>
+        C:
+        <span id="current-count" class="badge badge-dark text-light"></span>
+        <input id="count" type="range" min="3" step="1" max="100" />
+      </div>
+      <div>
+        D:
+        <span id="current-degree" class="badge badge-dark text-light"></span>
+      </div>
+    </div>
+  </body>
+</html>
