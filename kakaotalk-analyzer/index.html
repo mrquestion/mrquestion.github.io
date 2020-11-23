@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>KakaoTalk Analyzer</title>
+    <script src="//unpkg.com/jquery/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="//unpkg.com/bootstrap/dist/css/bootstrap.min.css" />
+    <script src="//unpkg.com/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="//unpkg.com/lodash/lodash.min.js"></script>
+    <script src="//unpkg.com/moment/min/moment-with-locales.min.js"></script>
+    <script src="//unpkg.com/chart.js/dist/Chart.bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row mt-4">
+        <div class="col col-12 col-md-10">
+          <div class="custom-file">
+            <label for="input-file" class="custom-file-label">KakaoTalkChats.txt 선택...</label>
+            <input type="file" id="input-file" class="custom-file-input" required accept=".txt" />
+          </div>
+        </div>
+        <div class="col col-12 col-md-2">
+          <button id="button-analyze" class="btn btn-link float-right float-md-none" disabled>분석</button>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col">
+          <div id="progress-analyze" class="progress fade">
+            <div id="progress-bar-analyze" class="progress-bar"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col">
+          <div id="charts">
+            <canvas id="chart-count-by-name"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="alerts" class="fixed-bottom"></div>
+  </body>
+</html>
